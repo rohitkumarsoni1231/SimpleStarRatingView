@@ -1,24 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleStarRatingView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAx-WO-qbs">
+                                <rect key="frame" x="32.666666666666657" y="251" width="328" height="350"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cmO-30-FbD">
+                                        <rect key="frame" x="10" y="30" width="308" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FN-LK-WCP">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="drg-Hb-IjW"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star-filled-icon"/>
+                                                <connections>
+                                                    <action selector="didTapOnStarButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCC-CR-pcD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILY-kg-OuJ">
+                                                <rect key="frame" x="62.333333333333343" y="0.0" width="57.666666666666657" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star-filled-icon"/>
+                                                <connections>
+                                                    <action selector="didTapOnStarButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRR-FO-h8t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvk-lg-PXY">
+                                                <rect key="frame" x="125.00000000000001" y="0.0" width="57.666666666666671" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star-filled-icon"/>
+                                                <connections>
+                                                    <action selector="didTapOnStarButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nu1-vx-stb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIG-Ag-bIW">
+                                                <rect key="frame" x="187.66666666666669" y="0.0" width="57.666666666666657" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star-filled-icon"/>
+                                                <connections>
+                                                    <action selector="didTapOnStarButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCf-A4-IZY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-cN-RPl">
+                                                <rect key="frame" x="250.33333333333334" y="0.0" width="57.666666666666657" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star-filled-icon"/>
+                                                <connections>
+                                                    <action selector="didTapOnStarButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSI-gj-HfR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-I9-y3Y">
+                                        <rect key="frame" x="113.66666666666669" y="140" width="100.33333333333331" height="23"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="DtO-ri-2Rd"/>
+                                    <constraint firstAttribute="width" constant="328" id="J1H-hh-hOw"/>
+                                    <constraint firstItem="8eg-I9-y3Y" firstAttribute="top" secondItem="cmO-30-FbD" secondAttribute="bottom" constant="50" id="WAM-kr-fY3"/>
+                                    <constraint firstAttribute="trailing" secondItem="cmO-30-FbD" secondAttribute="trailing" constant="10" id="ZLV-8Y-urH"/>
+                                    <constraint firstItem="cmO-30-FbD" firstAttribute="leading" secondItem="mAx-WO-qbs" secondAttribute="leading" constant="10" id="aSO-OY-jnv"/>
+                                    <constraint firstItem="cmO-30-FbD" firstAttribute="top" secondItem="mAx-WO-qbs" secondAttribute="top" constant="30" id="oAd-sd-uaK"/>
+                                    <constraint firstItem="8eg-I9-y3Y" firstAttribute="centerX" secondItem="cmO-30-FbD" secondAttribute="centerX" id="s0P-5R-aii"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mAx-WO-qbs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EPB-HP-Geh"/>
+                            <constraint firstItem="mAx-WO-qbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gm7-GW-Nok"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="mAx-WO-qbs" id="M8u-UD-Nxj"/>
+                        <outlet property="starLbl" destination="8eg-I9-y3Y" id="Nnx-4H-LEi"/>
+                        <outletCollection property="buttons" destination="1FN-LK-WCP" collectionClass="NSMutableArray" id="779-wU-FvN"/>
+                        <outletCollection property="buttons" destination="ILY-kg-OuJ" collectionClass="NSMutableArray" id="h9k-yd-PPb"/>
+                        <outletCollection property="buttons" destination="Lvk-lg-PXY" collectionClass="NSMutableArray" id="HM4-xs-Xuo"/>
+                        <outletCollection property="buttons" destination="yIG-Ag-bIW" collectionClass="NSMutableArray" id="588-C0-W7P"/>
+                        <outletCollection property="buttons" destination="rNR-cN-RPl" collectionClass="NSMutableArray" id="XXc-xi-Rb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-16" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star-filled-icon" width="30" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
